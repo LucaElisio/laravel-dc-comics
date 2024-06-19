@@ -3,6 +3,7 @@
 @section('content')
     <div class="container">
         <h1>Comics</h1>
+        <a href="{{route('comics.create')}}" class="btn btn-secondary mb-4">Aggiungi</a>
         <div class="row">
             @foreach ($comicsArray as $comic)
             <div class="col mb-3">

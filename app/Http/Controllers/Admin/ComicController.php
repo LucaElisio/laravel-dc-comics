@@ -23,7 +23,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('comics.create');
     }
 
     /**
@@ -37,10 +37,10 @@ class ComicController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Dccomic $comic)
     {
         // Find solo con primary key
-        $comic = Dccomic::findOrFail($id);
+        // $comic = Dccomic::findOrFail($id);
         return view('comics.show', compact('comic'));
 
     }
