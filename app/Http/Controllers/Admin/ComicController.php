@@ -39,7 +39,10 @@ class ComicController extends Controller
      */
     public function show(string $id)
     {
-        //
+        // Find solo con primary key
+        $comic = Dccomic::findOrFail($id);
+        return view('comics.show', compact('comic'));
+
     }
 
     /**
