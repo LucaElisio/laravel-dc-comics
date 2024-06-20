@@ -13,6 +13,14 @@
                         <h5 class="card-title">{{$comic->title}}</h5>
                         <h6 class="card-title">{{$comic->price}}</h6>
                         <a href="{{route('comics.show', ['comic' => $comic->id])}}" class="btn btn-primary">Dettagli</a>
+
+                        {{-- Cancellazione elemento --}}
+                        <form action="{{route('comics.destroy', ['comic' => $comic->id])}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Cancella</button>
+                        </form>
+
                     </div>
                 </div>
             </div>
